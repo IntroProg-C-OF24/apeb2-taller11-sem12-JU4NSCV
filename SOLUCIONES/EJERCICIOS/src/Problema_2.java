@@ -12,14 +12,14 @@ public class Problema_2 {
                 
             break;
             case 2:
-                System.out.println("Ingrese lado de triangualo");
+                System.out.println("Ingrese base de triangualo");
                 double base = sc.nextDouble();
                 System.out.println("Ingrese la altura del triangualo");
                 double altura = sc.nextDouble();
                 System.out.print("El area del triangualo es: " + AreaTriangulo(base, altura));
             break;
             case 3:
-                System.out.println("Ingrese lado de rectangulo");
+                System.out.println("Ingrese base de rectangulo");
                 base = sc.nextDouble();
                 System.out.println("Ingrese la altura del triangualo");
                 altura = sc.nextDouble();
