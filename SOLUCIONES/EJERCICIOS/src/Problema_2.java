@@ -21,7 +21,7 @@ public class Problema_2 {
             case 3:
                 System.out.println("Ingrese base de rectangulo");
                 base = sc.nextDouble();
-                System.out.println("Ingrese la altura del triangualo");
+                System.out.println("Ingrese la altura del rectangulo");
                 altura = sc.nextDouble();
                 System.out.print("El area del rectangulo es: " + AreaRectangulo(base, altura));
             break;

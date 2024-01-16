@@ -1,7 +1,7 @@
 import java.util.*;
 public class Problema_5 {
     public static void main(String[] args) {
-        int factor1[][], factor2[][], resultado[][];
+        int[][] factor1, factor2, resultado;
         Scanner sc = new Scanner(System.in);
         System.out.println("INGRESE OPERACION | 1. SUMA | 2. RESTA | 3. MULTIPLICACION |");
         int op = sc.nextInt();
@@ -20,48 +20,79 @@ public class Problema_5 {
             case 1:
                 System.out.println("SUMA DE MATRIZES");
                 System.out.println("PIMERA MATIZ");
-                PresentarMatriz(factor1);
+                for (int i = 0; i < factor1.length; i++) {
+                    for (int j = 0; j < factor1[i].length; j++)
+                        System.out.print(" ["+factor1[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("SEGUNDA MATRIZ");
-                PresentarMatriz(factor2);
+                for (int i = 0; i < factor2.length; i++) {
+                    for (int j = 0; j < factor2[i].length; j++)
+                        System.out.print(" ["+factor2[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("resultado");
                 SumaDeMatrizes(factor1, factor2, resultado);
+                for (int i = 0; i < resultado.length; i++) {
+                    for (int j = 0; j < resultado[i].length; j++)
+                        System.out.print(" ["+resultado[i][j]+"] ");
+                    System.out.println();
+                }
             break;
             case 2:
                 System.out.println("RESTA DE MATRIZES");
                 System.out.println("PIMERA MATIZ");
-                PresentarMatriz(factor1);
+                for (int i = 0; i < factor1.length; i++) {
+                    for (int j = 0; j < factor1[i].length; j++)
+                        System.out.print(" ["+factor1[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("SEGUNDA MATRIZ");
-                PresentarMatriz(factor2);
+                for (int i = 0; i < factor2.length; i++) {
+                    for (int j = 0; j < factor2[i].length; j++)
+                        System.out.print(" ["+factor2[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("RESULTADO");
                 RestaDeMatrizes(factor1, factor2, resultado);
+                for (int i = 0; i < resultado.length; i++) {
+                    for (int j = 0; j < resultado[i].length; j++)
+                        System.out.print(" ["+resultado[i][j]+"] ");
+                    System.out.println();
+                }
             break;
             case 3:
                 System.out.println("MULTIPLICACION DE MATRIZES");
                 System.out.println("PIMERA MATIZ");
-                PresentarMatriz(factor1);
+                for (int i = 0; i < factor1.length; i++) {
+                    for (int j = 0; j < factor1[i].length; j++)
+                        System.out.print(" ["+factor1[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("SEGUNDA MATRIZ");
-                PresentarMatriz(factor2);
+                for (int i = 0; i < factor2.length; i++) {
+                    for (int j = 0; j < factor2[i].length; j++)
+                        System.out.print(" ["+factor2[i][j]+"] ");
+                    System.out.println();
+                }
                 System.out.println("RESULTADO");
                 MultiplicacionDeMatrizes(factor1, factor2, resultado);
+                for (int i = 0; i < resultado.length; i++) {
+                    for (int j = 0; j < resultado[i].length; j++)
+                        System.out.print(" ["+resultado[i][j]+"] ");
+                    System.out.println();
+                }
             break;
         }
         sc.close();
     }
 
-    public static void PresentarMatriz(int matriz[][]) {
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++)
-                System.out.print(" ["+matriz[i][j]+"] ");
-            System.out.println();
-        }
-    }
     public static void SumaDeMatrizes(int matriz[][], int matriz1[][] , int resultado[][]){
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 resultado[i][j] = matriz[i][j] + matriz1[i][j];
             }
         }
-        PresentarMatriz(resultado);
     }
     public static void RestaDeMatrizes(int matriz[][], int matriz1[][] , int resultado[][]){
         for (int i = 0; i < matriz.length; i++) {
@@ -69,7 +100,6 @@ public class Problema_5 {
                 resultado[i][j] = matriz[i][j] - matriz1[i][j];
             }
         }
-        PresentarMatriz(resultado);
     }
     public static void MultiplicacionDeMatrizes(int matriz[][], int matriz1[][] , int resultado[][]){
         for (int i = 0; i < matriz.length; i++) {
@@ -79,7 +109,6 @@ public class Problema_5 {
                 }
             }
         }
-        PresentarMatriz(resultado);
     }
     public static int NumeroAletorio(){
         Random ran = new Random();

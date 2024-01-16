@@ -11,16 +11,6 @@ public class Problema_3 {
         System.out.println("INGRESE NOTA DEL EXAMEN QUIMESTRAL");      
         double examen=sc.nextDouble();
         double total = Promedio(nota1, nota2, nota3, examen);
-        PromedioCualitativo(total);
-        sc.close();
-    }
-    public static double Promedio(double nota1,double nota2,double nota3, double examen){
-        double  promedio;
-        promedio = ((nota1 + nota2 + nota3)/3)*0.8;
-        promedio += examen * 0.2;
-        return promedio;
-    }
-    public static void PromedioCualitativo(double total){
         if (total <=5) {
             System.out.println("PROMEDIO CUALITATIVO ES REGULAR => " + total);
         }else if (total<=8) {
@@ -30,5 +20,12 @@ public class Problema_3 {
         }else if (total<=10) {
             System.out.println("PROMEDIO CUALITATIVO ES SOBRESALIENTE => " + total);
         }
+        sc.close();
+    }
+    public static double Promedio(double nota1,double nota2,double nota3, double examen){
+        double  promedio;
+        promedio = ((nota1 + nota2 + nota3)/3)*0.8;
+        promedio += examen * 0.2;
+        return promedio;
     }
 }
